@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+html,
+body,
+#root {
+  height: 100%;
+  background: #0e1129;
+}
+.wrapper {
+  color: white;
+  position: relative;
+}
+.wrapper .spline {
+  position: absolute;
+  align-self: center;
+  margin: 0;
+  top: 0;
+  right: 0;
+  /* left: 100; */
+  @media (max-width: 1440px) {
+    transform: scale(0.6) translateX(300px) translateY(-50px);
+  }
+  @media (max-width: 1024px) {
+    transform: scale(0.8) translateX(200px);
+  }
+  @media (max-width: 800px) {
+    transform: scale(0.7) translateX(600px);
+  }
+  @media (max-width: 600px) {
+    transform: scale(0.5) translateX(-100px);
+    right: auto;
+    left: 50%;
+    margin-left: -600px;
+  }
+}
+.menu {
+  display: flex;
+  gap: 30px;
+  margin: 0 30px 0 100px;
+  align-self: center;
+  padding-top: 30px;
+}
+.menu li {
+  list-style: none;
+  margin: 0;
+}
+.menu li a {
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+  border: 1px solid rgb(255, 255, 255, 0);
+  transition: 1s;
+  border-radius: 14px;
+}
+.menu li a:hover {
+  border: 1px solid rgb(255, 255, 255, 0.2);
+}
+.content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.text {
+  margin: 0 30px 0 100px;
+}
+.wrapper .content .head {
+  position: absolute;
+  top: 190px;
+  font-size: 60px;
+  font-weight: bold;
+  font-style: italic;
+  max-width: 1200px;
+}
+.content .bod {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.555);
+  top: 420px;
+  font-size: 20px;
+  max-width: 1200px;
+}
